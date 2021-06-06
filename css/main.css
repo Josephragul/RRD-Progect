@@ -1,0 +1,841 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    min-height: 1000px;
+    background: #f0eeee;
+}
+
+.grid-item ul li {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    color: #f0eeee;
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+
+    header.sticky {
+        background: #fff;
+        padding: 10px 100px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .logoArea {
+        width: 50%;
+        text-align: center;
+        margin-left: -70px;
+
+    }
+
+    header .logo {
+        color: #111;
+        font-weight: 600;
+        font-size: 0.8em;
+        text-decoration: none;
+
+    }
+
+    header .logo span {
+        color: #e50e62;
+    }
+
+    header .navigation {
+        /* position: relative;
+            display: flex; */
+        display: none;
+
+    }
+
+    /* .navigation li {
+            list-style: none;
+            margin-left: 20px;
+            color: #0c0b0b;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.8rem;
+            
+        }
+         */
+    /* .active,
+        .btn:hover {
+            border-bottom: #e50e62 2px solid;
+            color: #e50e62;
+        }
+        
+        .navigation li img {
+            color: #e50e62;
+        }
+        
+        .navigation .active {
+            color: #e50e62;
+            border-bottom: #e50e62 2px solid;
+        }
+        
+        header.sticky .navigation li a {
+            color: #111;
+        }
+        
+        header.sticky .logo {
+            color: #111;
+        }
+        
+        header .navigation li:hover {
+            color: #ff0157;
+        } */
+
+
+
+
+
+    .main {
+        position: relative;
+        width: 100%;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+
+    .main img {
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 93vh;
+        opacity: 0.4;
+    }
+
+    .textContainer {
+        position: relative;
+        width: 100%;
+        height: 5vh;
+        top: 0;
+        left: 0;
+        margin-top: -70vh;
+        background-color: transparent;
+
+    }
+
+    .textContainer h2 {
+        color: #e50e62;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-right: 20vh;
+
+    }
+
+
+    .tabContainer {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 160vh;
+        margin-right: 30vh;
+        margin-top: 50vh;
+        background: #fff;
+        overflow: scroll;
+    }
+
+    [data-tab-content] {
+        display: none;
+    }
+
+    .active[data-tab-content] {
+        display: block;
+    }
+
+    .tabContent {
+        padding: 30px;
+    }
+
+    .tabContent p {
+        padding: 10px 0;
+        margin: 10px 0;
+        color: rgb(85, 84, 84);
+    }
+
+    b,
+    strong {
+        color: rgb(48, 47, 47);
+    }
+
+    .grid-container {
+
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+    }
+
+    .grid-item {
+        margin: 10px 10px;
+    }
+
+    .grid-item ul li {
+        list-style: none;
+
+    }
+
+    .grid-item h3 {
+        padding-bottom: 5px;
+        color: #e50e62;
+
+    }
+
+    #remediation li {
+        text-decoration: none;
+        font-size: 1rem;
+        margin: 5px 50px;
+        list-style: none;
+        color: rgb(85, 84, 84);
+    }
+
+    #remediation ul li::before {
+        content: "\2022";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    #contact h3 {
+        font-size: 0.8rem;
+    }
+
+    #contact li {
+
+        padding: 5px 0;
+        font-size: 0.8rem;
+        color: rgb(46, 45, 45);
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    header.sticky {
+        background: #fff;
+        padding: 10px 100px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .logoArea {
+        width: 50%;
+        text-align: center;
+        margin-left: -180px;
+    }
+
+    header .logo {
+        color: #111;
+        font-weight: 600;
+        font-size: 1em;
+        text-decoration: none;
+        padding-left: -180px;
+    }
+
+    header .logo span {
+        color: #e50e62;
+    }
+
+    header .navigation {
+        position: relative;
+        display: flex;
+
+    }
+
+    .navigation li {
+        list-style: none;
+        margin-left: 20px;
+        color: #0c0b0b;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 0.8rem;
+
+    }
+
+    .active,
+    .btn:hover {
+        border-bottom: #e50e62 2px solid;
+        color: #e50e62;
+    }
+
+    .navigation li img {
+        color: #e50e62;
+    }
+
+    .navigation .active {
+        color: #e50e62;
+        border-bottom: #e50e62 2px solid;
+    }
+
+    header.sticky .navigation li a {
+        color: #111;
+    }
+
+    header.sticky .logo {
+        color: #111;
+    }
+
+    header .navigation li:hover {
+        color: #ff0157;
+    }
+
+
+    .main {
+        position: relative;
+        width: 100%;
+    }
+
+    .main img {
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 93vh;
+    }
+
+    .textContainer {
+        position: relative;
+        width: 100%;
+        height: 7vh;
+        margin-top: -4px;
+        background-color: #e50e62;
+    }
+
+    .textContainer h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 1.3rem;
+        padding-top: 7px;
+    }
+
+
+    .tabContainer {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 120vh;
+        margin-right: 30vh;
+        margin-top: 70vh;
+        background: #fff;
+        overflow: scroll;
+    }
+
+    [data-tab-content] {
+        display: none;
+    }
+
+    .active[data-tab-content] {
+        display: block;
+    }
+
+    .tabContent {
+        padding: 30px;
+    }
+
+    .tabContent p {
+        padding: 10px 0;
+        margin: 10px 0;
+        color: rgb(85, 84, 84);
+    }
+
+    b,
+    strong {
+        color: rgb(48, 47, 47);
+    }
+
+    .grid-container {
+
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+    }
+
+    .grid-item {
+        margin: 10px 0;
+    }
+
+    .grid-item h3 {
+        padding-bottom: 5px;
+    }
+
+    #remediation li {
+        text-decoration: none;
+        font-size: 1rem;
+        margin: 5px 50px;
+        list-style: none;
+        color: rgb(85, 84, 84);
+    }
+
+    #remediation ul li::before {
+        content: "\2022";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    #contact h3 {
+        font-size: 0.8rem;
+    }
+
+    #contact li {
+
+        padding: 5px 0;
+        font-size: 0.8rem;
+        color: rgb(46, 45, 45);
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    header.sticky {
+        background: #fff;
+        padding: 10px 100px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .logoArea {
+        width: 50%;
+        text-align: center;
+        margin-left: -180px;
+    }
+
+    header .logo {
+        color: #111;
+        font-weight: 600;
+        font-size: 1em;
+        text-decoration: none;
+
+    }
+
+    header .logo span {
+        color: #e50e62;
+    }
+
+    header .navigation {
+        position: relative;
+        display: flex;
+
+
+    }
+
+    .navigation li {
+        list-style: none;
+        margin-left: 7px;
+        color: #070707;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+
+    }
+
+    .active,
+    .btn:hover {
+        border-bottom: #e50e62 2px solid;
+        color: #e50e62;
+    }
+
+    .navigation li img {
+        color: #e50e62;
+    }
+
+    .navigation .active {
+        color: #e50e62;
+        border-bottom: #e50e62 2px solid;
+    }
+
+    header.sticky .navigation li a {
+        color: #111;
+    }
+
+    header.sticky .logo {
+        color: #111;
+    }
+
+    header .navigation li:hover {
+        color: #ff0157;
+    }
+
+
+    .main {
+        position: relative;
+        width: 100%;
+    }
+
+    .main img {
+        position: relative;
+        width: 50%;
+        height: 93vh;
+    }
+
+    .textContainer {
+        position: relative;
+        width: 50%;
+        height: 7vh;
+        margin-top: -4px;
+        background-color: #e50e62;
+    }
+
+    .textContainer h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 7px;
+    }
+
+    .tabContainer::-webkit-scrollbar {
+        width: 5px;
+
+    }
+
+    .tabContainer {
+        font-size: 0.8rem;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 0;
+        height: 120vh;
+        margin-left: 80vh;
+        margin-top: 20vh;
+        background: #fff;
+        overflow: scroll;
+    }
+
+    [data-tab-content] {
+        display: none;
+    }
+
+    .active[data-tab-content] {
+        display: block;
+    }
+
+    .tabContent {
+        padding: 30px;
+    }
+
+    .tabContent p {
+        padding: 10px 0;
+        margin: 10px 0;
+        color: rgb(85, 84, 84);
+    }
+
+    b,
+    strong {
+        color: rgb(48, 47, 47);
+    }
+
+    .grid-container {
+
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+    }
+
+    .grid-item {
+        margin: 10px 0;
+    }
+
+    .grid-item h3 {
+        padding-bottom: 5px;
+    }
+
+    #remediation li {
+        text-decoration: none;
+        font-size: 1rem;
+        margin: 5px 50px;
+        list-style: none;
+        color: rgb(85, 84, 84);
+    }
+
+    #remediation ul li::before {
+        content: "\2022";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+
+    #contact li {
+
+        padding: 5px 0;
+        font-size: 0.9rem;
+        color: rgb(46, 45, 45);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    header.sticky {
+        background: #fff;
+        padding: 10px 100px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .logoArea {
+        width: 50%;
+        text-align: center;
+        margin-left: -180px;
+    }
+
+    header .logo {
+        color: #111;
+        font-weight: 600;
+        font-size: 1em;
+        text-decoration: none;
+        padding-left: -180px;
+    }
+
+    header .logo span {
+        color: #e50e62;
+    }
+
+    header .navigation {
+        position: relative;
+        display: flex;
+    }
+
+    .navigation li {
+        list-style: none;
+        margin-left: 20px;
+        color: #5f5d5d;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .active,
+    .btn:hover {
+        border-bottom: #e50e62 2px solid;
+        color: #e50e62;
+    }
+
+    .navigation li img {
+        color: #e50e62;
+    }
+
+    .navigation .active {
+        color: #e50e62;
+        border-bottom: #e50e62 2px solid;
+    }
+
+    header.sticky .navigation li a {
+        color: #111;
+
+    }
+
+    .navigation li {
+        font-size: 1rem;
+    }
+
+    header.sticky .logo {
+        color: #111;
+    }
+
+    header .navigation li:hover {
+        color: #ff0157;
+    }
+
+
+
+    .main {
+        position: relative;
+        width: 100%;
+    }
+
+    .main img {
+        position: relative;
+        width: 50%;
+        height: 93vh;
+    }
+
+    .textContainer {
+        position: relative;
+        width: 50%;
+        height: 7vh;
+        margin-top: -4px;
+        background-color: #e50e62;
+    }
+
+    .textContainer h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 1.3rem;
+        padding-top: 7px;
+    }
+
+
+    .tabContainer {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 0;
+        height: 120vh;
+        margin-left: 90vh;
+        margin-top: 20vh;
+        background: #fff;
+        overflow: scroll;
+    }
+
+    [data-tab-content] {
+        display: none;
+    }
+
+    .active[data-tab-content] {
+        display: block;
+    }
+
+    .tabContent {
+        padding: 30px;
+    }
+
+    .tabContent p {
+        padding: 10px 0;
+        margin: 10px 0;
+        color: rgb(85, 84, 84);
+    }
+
+    b,
+    strong {
+        color: rgb(48, 47, 47);
+    }
+
+    .grid-container {
+
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+    }
+
+    .grid-item {
+        margin: 10px 0;
+    }
+
+    .grid-item h3 {
+        padding-bottom: 5px;
+    }
+
+    #remediation li {
+        text-decoration: none;
+        font-size: 1rem;
+        margin: 5px 50px;
+        list-style: none;
+        color: rgb(85, 84, 84);
+    }
+
+    #remediation ul li::before {
+        content: "\2022";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    ul li {
+        list-style: none;
+        font-size: 0.8rem;
+    }
+
+
+    #contact li {
+
+        padding: 5px 0;
+        font-size: 0.9rem;
+        color: rgb(46, 45, 45);
+    }
+
+
+
+
+
+}
